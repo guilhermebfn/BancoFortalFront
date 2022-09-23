@@ -1,0 +1,13 @@
+<p class="">Banco Fortal</p>
+
+<form>
+    <div class="mb-3">
+        <label for="usuario" class="form-label">Usuário</label>
+        <input id="usuario" type="text" class="form-control" #usuario />
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input id="senha" type="password" class="form-control" #senha />
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="submeter(usuario.value, senha.value)">Entrar</button>
+</form>

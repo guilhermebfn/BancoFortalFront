@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Códigos de teste
+/src/app/login/login.component.spec.ts
