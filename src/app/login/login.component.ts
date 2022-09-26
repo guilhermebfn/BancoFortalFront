@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginService } from '../login.service';
+
+import { UsuarioService } from '../usuario.service'; 
 
 @Component({
   selector: 'app-login',
@@ -8,13 +9,15 @@ import { LoginService } from '../login.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService: LoginService) { }
+  constructor(private usuarioService: UsuarioService) { }
 
   ngOnInit(): void {
   }
 
   // Incompleta
-  submeter(usuario: string, senha: string) {
-    console.log(usuario + senha);
+  entrar(nomeUsuario: string, senha: string) {
+
+    this.usuarioService.entrar(nomeUsuario, senha)
+      .subscribe(sessao => window.alert(sessao.nomeUsuario + ' ' + sessao.token));
   }
 }

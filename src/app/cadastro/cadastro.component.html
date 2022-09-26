@@ -1,4 +1,4 @@
-<p class="">Banco Fortal</p>
+<h1>Cadastro</h1>
 
 <form>
     <div class="mb-3">
@@ -9,5 +9,8 @@
         <label for="senha" class="form-label">Senha</label>
         <input id="senha" type="password" class="form-control" #senha />
     </div>
-    <button type="button" class="btn btn-primary" (click)="entrar(usuario.value, senha.value)">Entrar</button>
+    <button type="button" class="btn btn-primary" (click)="cadastrar(usuario.value, senha.value)">
+        Cadastrar
+    </button>
+
 </form>
